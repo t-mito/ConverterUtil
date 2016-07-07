@@ -37,9 +37,9 @@ public class ContainerFieldJavadocGenerator {
                 String[] value = line[i].split("\t");
 
                 if (value.length != 2) {
-                	throw new IllegalArgumentException("Line Please specify in the following format: javadoc name + tab + field name");
+                    throw new IllegalArgumentException("Line Please specify in the following format: javadoc name + tab + field name");
                 }
-                
+
                 stb.append("/** " + value[0] + " */\n");
                 stb.append("private String " + value[1] + " = null;\n\n");
             }
